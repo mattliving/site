@@ -1,0 +1,13 @@
+**/.DS_Store
+dist
+.tmp
+
+_public
+app/bower_components
+node_modules
+npm-debug.log
+
+*.sublime-project
+*.sublime-workspace
+
+test/test-results.xml

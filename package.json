@@ -1,0 +1,31 @@
+{
+  "author": "Matthew Livingston",
+  "name": "mattliving",
+  "description": "Matthew Livingston's Site",
+  "version": "0.0.1",
+  "homepage": "http://mattliving.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nss/angular-brunch-seed-javascript"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/brunch watch --server",
+    "test": "testacular start test/testacular.conf.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "brunch": ">= 1.4 < 1.5",
+    "javascript-brunch": ">= 1.0 < 1.5",
+
+    "css-brunch": ">= 1.0 < 1.5",
+    "clean-css-brunch": ">= 1.0 < 1.5",
+    "less-brunch": ">= 1.4 < 1.5",
+
+    "ngmin-uglify-js-brunch": "~1.7.2",
+    "auto-reload-brunch": ">= 1.3 < 1.5",
+    "protractor": "~0.12.0"
+  }
+}
