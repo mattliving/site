@@ -1,3 +1,38 @@
 
 @import "themes/custom/_variables.less";
 @import "themes/custom/_overrides.less";
+
+trapezium {
+  .north {
+    background-color: #cccccc;
+  }
+  .south {
+    background-color: #eeeeee;
+  }
+  .east {
+    background-color: #dddddd;
+  }
+  .west {
+    background-color: #ffffff;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    &.ne {
+      border-bottom: 60px solid transparent;
+      border-right: 60px solid green;
+    }
+    &.nw {
+      border-bottom: 60px solid transparent;
+      border-left: 60px solid green;
+    }
+    &.se {
+      border-top: 60px solid transparent;
+      border-right: 60px solid green;
+    }
+    &.sw {
+      border-top: 60px solid transparent;
+      border-left: 60px solid green;
+    }
+  }
+}

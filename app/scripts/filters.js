@@ -1,11 +1,8 @@
-
-'use strict';
-
 /* Filters */
+var filters = angular.module('mattlivingFilters', []);
 
-angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
-    return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
-    }
-  }]);
+filters.filter('interpolate', ['version', function(version) {
+  return function(text) {
+    return String(text).replace(/\%VERSION\%/mg, version);
+  }
+}]);
