@@ -12,17 +12,15 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: {
-        'js/vendor.js': /^app\/bower_components/,
+        'js/vendor.js': /^bower_components/,
         'js/app.js': /^app\/scripts/
         // 'test/scenarios.js': /^test(\/|\\)e2e/
       },
       order: {
         before: [
-          'app/bower_components/lodash/lodash.js',
-          'app/bower_components/angular/angular.js',
-          'app/bower_components/angular-resource/angular-resource.js',
-          'app/bower_components/angular-route/angular-route.js'
-
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/lodash/dist/lodash.js',
+          'bower_components/angular/angular.js'
          ]
       }
     },

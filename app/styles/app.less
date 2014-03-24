@@ -1,6 +1,69 @@
-
 @import "themes/custom/_variables.less";
 @import "themes/custom/_overrides.less";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+container {
+  height: 100%;
+  width: 100%;
+  background: #eee;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  section {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &.middle {
+      height: 1px;
+      width: 1px;
+      background: green;
+      left: 50%;
+      top: 50%;
+    }
+    &.top {
+      height: 1px;
+      width: 1px;
+      background: red;
+      left: 0px;
+      top: 0px;
+    }
+    &.bottom {
+      height: 1px;
+      width: 1px;
+      background: yellow;
+      left: 0px;
+      top: 50%;
+    }
+    &.left {
+      height: 1px;
+      width: 1px;
+      background: orange;
+      left: 0px;
+      top: 0px;
+    }
+    &.right {
+      height: 1px;
+      width: 1px;
+      background: blue;
+      left: 50%;
+      top: 0px;
+    }
+  }
+}
 
 trapezium {
   .north {
