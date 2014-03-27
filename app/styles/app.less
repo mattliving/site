@@ -1,6 +1,17 @@
 @import "themes/custom/_variables.less";
 @import "themes/custom/_overrides.less";
 
+@noto: 'Noto Serif';
+@libre: 'Libre Baskerville';
+@glegoo: 'Glegoo';
+@font-family-serif: @libre, serif;
+
+@gray-darker: #444;
+@gray-dark: #AFAFAF;
+@gray: #BFBFBF;
+@gray-light: #CFCFCF;
+@gray-lighter: #DFDFDF;
+
 html {
   height: 100%;
 }
@@ -8,6 +19,11 @@ html {
 body {
   height: 100%;
   width: 100%;
+  font-family: @font-family-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
 }
 
 container {
@@ -19,46 +35,59 @@ container {
   top: 50%;
 
   section {
+    font-size: 38px;
     height: 1px;
     width: 1px;
     position: absolute;
+    .transition-ease(200ms);
+
     h1 {
       text-align: center;
       margin-top: 0;
       margin-bottom: 0;
     }
+
+    &:hover {
+      background: @gray-darker;
+      font-size: 42px;
+      .transition-ease(180ms);
+    }
     &.middle {
+      font-size: 72px;
       height: 1px;
       width: 1px;
-      background: green;
+      background: @gray-darker;
       left: 50%;
       top: 50%;
+      h1 {
+        color: #ecf0f1;
+      }
     }
     &.top {
       height: 1px;
       width: 1px;
-      background: red;
+      background: @gray-lighter;
       left: 0px;
       top: 0px;
     }
     &.bottom {
       height: 1px;
       width: 1px;
-      background: yellow;
+      background: @gray;
       left: 0px;
       top: 50%;
     }
     &.left {
       height: 1px;
       width: 1px;
-      background: orange;
+      background: @gray-dark;
       left: 0px;
       top: 0px;
     }
     &.right {
       height: 1px;
       width: 1px;
-      background: blue;
+      background: @gray-light;
       left: 50%;
       top: 0px;
     }
@@ -98,4 +127,20 @@ trapezium {
       border-left: 60px solid green;
     }
   }
+}
+
+.transition-ease (@time: 250ms) {
+    -webkit-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.transition-ease-in (@time: 400ms) {
+    -webkit-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+    -moz-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+    -ms-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+    -o-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+    transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
 }
