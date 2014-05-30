@@ -1,18 +1,18 @@
 /* Directives */
 var directives = angular.module('mattlivingDirectives', []);
 
-directives.directive('resize', function($window, $rootScope) {
-    return function($scope) {
-        $scope.width  = $window.innerWidth;
-        $scope.height = $window.innerHeight;
-        angular.element($window).bind('resize', function() {
-            $scope.$apply(function() {
-                $scope.width  = $window.innerWidth;
-                $scope.height = $window.innerHeight;
-                $rootScope.$broadcast('windowResizeEventFired');
-            });
-        });
-    };
+directives.directive('splitList', function() {
+    return {
+        restrict: 'EA',
+        replace: true,
+        transclude: true,
+        templateUrl: '/partials/splitList.html',
+        scope: {
+            items: '='
+        },
+        link: function(scope, elem, attrs) {
+        }
+    }
 });
 
 directives.directive('container', function() {
@@ -42,7 +42,9 @@ directives.directive('container', function() {
                             $child.height(height);
                             $child.width(width);
                             $child.css('margin', -(height/2) + 'px 0 0 ' + -(width/2) + 'px');
-                            $child.children('h1').css('line-height', height + 'px');
+                            $child.children('div').css('line-height', height + 'px');
+                            // $child.children('h1').css('line-height', height*0.7 + 'px');
+                            // $child.children('h3').css('line-height', height*0.3 + 'px');
                             break;
                         case 'top':
                             height = scope.height / 3;
@@ -75,6 +77,20 @@ directives.directive('container', function() {
                 });
             }
         }
+    };
+});
+
+directives.directive('resize', function($window, $rootScope) {
+    return function($scope) {
+        $scope.width  = $window.innerWidth;
+        $scope.height = $window.innerHeight;
+        angular.element($window).bind('resize', function() {
+            $scope.$apply(function() {
+                $scope.width  = $window.innerWidth;
+                $scope.height = $window.innerHeight;
+                $rootScope.$broadcast('windowResizeEventFired');
+            });
+        });
     };
 });
 
