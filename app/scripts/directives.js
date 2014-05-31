@@ -5,12 +5,19 @@ directives.directive('splitList', function() {
     return {
         restrict: 'EA',
         replace: true,
-        transclude: true,
         templateUrl: '/partials/splitList.html',
         scope: {
-            items: '='
+            items: '=',
+            height: '='
         },
         link: function(scope, elem, attrs) {
+
+            scope.$watch('height', function(newVal, oldVal) {
+                var $li = elem.find('li');
+                console.log($li);
+                console.log($(elem).parent().height());
+                $li.height($(elem).parent().height()/$li.length);
+            });
         }
     }
 });
@@ -42,7 +49,7 @@ directives.directive('container', function() {
                             $child.height(height);
                             $child.width(width);
                             $child.css('margin', -(height/2) + 'px 0 0 ' + -(width/2) + 'px');
-                            $child.children('div').css('line-height', height + 'px');
+                            // $child.children('div').css('line-height', height + 'px');
                             // $child.children('h1').css('line-height', height*0.7 + 'px');
                             // $child.children('h3').css('line-height', height*0.3 + 'px');
                             break;
@@ -50,26 +57,30 @@ directives.directive('container', function() {
                             height = scope.height / 3;
                             $child.height(height);
                             $child.width(scope.width);
-                            $child.children('h1').css('line-height', height + 'px');
+                            // $child.children('h1').css('line-height', height + 'px');
                             break;
                         case 'left':
                             $child.height(scope.height);
                             $child.width(scope.width / 3);
-                            $child.children('h1').css('line-height', scope.height + 'px');
+                            // $child.children('h1').css('line-height', scope.height + 'px');
+                            // var $li = $child.find('li');
+                            // $li.height(scope.height/$li.length);
                             break;
                         case 'bottom':
                             height = scope.height / 3;
                             $child.height(height);
                             $child.width(scope.width);
                             $child.css('top', (scope.height - height) + 'px');
-                            $child.children('h1').css('line-height', height + 'px');
+                            // $child.children('h1').css('line-height', height + 'px');
                             break;
                         case 'right':
                             width = scope.width / 3;
                             $child.height(scope.height);
                             $child.width(width);
                             $child.css('left', (scope.width - width) + 'px');
-                            $child.children('h1').css('line-height', scope.height + 'px');
+                            // $child.children('h1').css('line-height', scope.height + 'px');
+                            // var $li = $child.find('li');
+                            // $li.height(scope.height/$li.length);
                             break;
                         default:
                             break;

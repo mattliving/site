@@ -1,20 +1,28 @@
 <section class="middle">
-  <div>
+  <div class="vertically-centered">
     <h1>ML</h1>
     <h4>web developer</h4>
   </div>
 </section>
 <section class="top">
-  <h1>about</h1>
+  <div class="vertically-centered">
+    <h1>about</h1>
+  </div>
 </section>
 <section class="bottom">
-  <h1>contact</h1>
+  <div class="vertically-centered">
+    <h1>contact</h1>
+  </div>
 </section>
-<section class="left">
-  <h1>projects</h1>
-  <split-list items='projects'></split-list>
+<section class="left" ng-click="switchView('left')">
+  <div class="vertically-centered" ng-switch on="currentView.left" >
+    <h1 ng-switch-when="false">projects</h1>
+    <split-list ng-switch-when="true" items='projects' height='height'></split-list>
+  </div>
 </section>
-<section class="right">
-  <h1>pursuits</h1>
-  <split-list items='photoSets'></split-list>
+<section class="right" ng-click="switchView('right')">
+  <div class="vertically-centered" ng-switch on="currentView.right">
+    <h1 ng-switch-when="false">pursuits</h1>
+    <split-list ng-switch-when="true" items='photoSets' height='height'></split-list>
+  </div>
 </section>

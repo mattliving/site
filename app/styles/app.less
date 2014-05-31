@@ -38,6 +38,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
+div.vertically-centered {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.list-group {
+  margin-bottom: 0;
+}
+
+.list-group-item {
+
+  display: table;
+  width: 100%;
+  padding: 0 15px;
+
+  &:first-child, &:last-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
 container {
   height: 100%;
   width: 100%;
@@ -48,6 +71,7 @@ container {
 
   section {
     position: absolute;
+    display: table;
     .transition-ease(180ms);
 
     h1 {
@@ -91,13 +115,8 @@ container {
     }
     &.middle {
       background: @gray;
-      display: table;
       left: 50%;
       top: 50%;
-      div {
-        display: table-cell;
-        vertical-align: middle;
-      }
       h1 {
         font-size: 84px;
         color: @clouds;
@@ -108,6 +127,7 @@ container {
         color: @clouds;
       }
     }
+
   }
 }
 
