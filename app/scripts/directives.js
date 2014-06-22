@@ -1,23 +1,78 @@
 /* Directives */
 var directives = angular.module('mattlivingDirectives', []);
 
-directives.directive('splitList', function() {
+directives.directive('panel', function() {
+    return {
+        restrict: 'EA',
+        templateUrl: 'partials/panel.html',
+        replace: true,
+        transclude: true,
+        scope: {
+            state: '=',
+            position: '@',
+            height: '=',
+            width: '='
+        },
+        link: function(scope, elem, attrs, ctrl, transclude) {
+
+            scope.$watch('state', function(newVal, oldVal) {
+                switch (newVal) {
+                    case 'panel':
+                        elem.removeClass("two-thirds");
+                        // elem.removeClass("three-quarters");
+                        break;
+                    case 'list':
+                        elem.removeClass("two-thirds");
+                        // elem.removeClass("three-quarters");
+                        break;
+                    case 'content':
+                        elem.addClass("two-thirds");
+                        // elem.addClass("three-quarters");
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            // scope.$on('list:li:active', function(event, item, className) {
+            // });
+
+            // scope.$on('list:li:inactive', function(event, item, className) {
+            // });
+        }
+    }
+})
+
+directives.directive('list', function() {
     return {
         restrict: 'EA',
         replace: true,
         templateUrl: '/partials/splitList.html',
         scope: {
             items: '=',
+            property: "@",
             height: '='
         },
         link: function(scope, elem, attrs) {
 
+            var $li;
             scope.$watch('height', function(newVal, oldVal) {
-                var $li = elem.find('li');
-                console.log($li);
-                console.log($(elem).parent().height());
-                $li.height($(elem).parent().height()/$li.length);
+                $li = elem.find('li');
+                $li.height(newVal/$li.length);
             });
+
+            scope.toggleActive = function(e, item) {
+                var $this = $(e.currentTarget);
+                $li.not($this).removeClass('active');
+
+                $this.toggleClass('active');
+                if ($this.hasClass('active')) {
+                    scope.$emit("list:li:active", item, $this.parent().parent().parent().parent().parent().attr("position"));
+                }
+                else {
+                    scope.$emit("list:li:inactive", item, $this.parent().parent().parent().parent().parent().attr("position"));
+                }
+            }
         }
     }
 });
@@ -30,22 +85,20 @@ directives.directive('container', function() {
 
             scope.$watch('height', function(newVal, oldVal) {
                 elem.height(newVal);
-                elem.css('margin-top', (-newVal/2 + 'px'));
-                alignChildren();
             });
             scope.$watch('width', function(newVal, oldVal) {
                 elem.width(newVal);
-                elem.css('margin-left', (-newVal/2 + 'px'));
-                alignChildren();
             });
 
             var alignChildren = function() {
                 _.each(elem.children(), function(child) {
                     var $child = $(child), height, width;
-                    switch ($child.attr('class')) {
+                    switch ($child.attr('position')) {
                         case 'middle':
                             height = scope.height / 3;
                             width  = scope.width / 3;
+                            // $child.attr("height", height);
+                            // $child.attr("width", width);
                             $child.height(height);
                             $child.width(width);
                             $child.css('margin', -(height/2) + 'px 0 0 ' + -(width/2) + 'px');
@@ -55,11 +108,15 @@ directives.directive('container', function() {
                             break;
                         case 'top':
                             height = scope.height / 3;
+                            // $child.attr("height", height);
+                            // $child.attr("width", width);
                             $child.height(height);
                             $child.width(scope.width);
                             // $child.children('h1').css('line-height', height + 'px');
                             break;
                         case 'left':
+                        // $child.attr("height", height);
+                        //     $child.attr("width", width);
                             $child.height(scope.height);
                             $child.width(scope.width / 3);
                             // $child.children('h1').css('line-height', scope.height + 'px');
@@ -68,6 +125,8 @@ directives.directive('container', function() {
                             break;
                         case 'bottom':
                             height = scope.height / 3;
+                            // $child.attr("height", height);
+                            // $child.attr("width", width);
                             $child.height(height);
                             $child.width(scope.width);
                             $child.css('top', (scope.height - height) + 'px');
@@ -75,6 +134,8 @@ directives.directive('container', function() {
                             break;
                         case 'right':
                             width = scope.width / 3;
+                            // $child.attr("height", height);
+                            // $child.attr("width", width);
                             $child.height(scope.height);
                             $child.width(width);
                             $child.css('left', (scope.width - width) + 'px');
@@ -102,39 +163,5 @@ directives.directive('resize', function($window, $rootScope) {
                 $rootScope.$broadcast('windowResizeEventFired');
             });
         });
-    };
-});
-
-directives.directive('trapezium', function() {
-    return {
-        restrict: 'EA',
-        templateUrl: '/partials/trapezium.html',
-        scope: {
-            quadrant: '@', // north, west, south, east
-            width: '=',
-            height: '='
-        },
-        link: function(scope, elem, attrs) {
-            switch (scope.quadrant) {
-                case 'north':
-                    scope.first  = 'ne';
-                    scope.second = 'nw';
-                    break;
-                case 'south':
-                    scope.first  = 'se';
-                    scope.second = 'sw';
-                    break;
-                case 'east':
-                    scope.first  = 'se';
-                    scope.second = 'ne';
-                    break;
-                case 'west':
-                    scope.first  = 'sw';
-                    scope.second = 'nw';
-                    break;
-                default:
-                    break;
-            }
-        }
     };
 });
