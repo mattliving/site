@@ -15,16 +15,16 @@
     </aside>
     <list ng-switch-when="list" items='projects' property='name' height='height'></list>
     <div class="two-thirds" ng-switch-when="content">
-      <iframe frameborder="0" src="http://localhost:8081/"></iframe>
+      <video autoplay controls width="100%" height="100%" src="/img/kesagiri.mov"></video>
     </div>
   </div>
 </panel>
 <panel state="views.right" position="right" ng-click="switchView('right')">
   <div ng-switch on="views.right">
     <aside ng-switch-when="panel">
-      <h1>pursuits</h1>
+      <h1>hobbies</h1>
     </aside>
-    <list ng-switch-when="list" items='photoSets' height='height'></list>
+    <list ng-switch-when="list" items='photoSets' property='name' height='height'></list>
     <div class="two-thirds" ng-switch-when="content">
       <iframe frameborder="0" width="100%" height="height" src="http://localhost:8081/"></iframe>
     </div>

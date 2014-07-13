@@ -29,10 +29,22 @@ angular.module('mattliving').controller('HomeCtrl', function($scope) {
     ];
 
     $scope.photoSets = [
-        'Birds',
-        'Rock Climbing',
-        'Skiing',
-        'Travel'
+        {
+            name: 'Birding',
+            img: 'img/eagle_owl.jpg'
+        },
+        {
+            name: 'Japanese Sword',
+            img: 'img/sword.jpg'
+        },
+        {
+            name: 'Photography',
+            img: 'img/kensington_gardens.jpg'
+        },
+        {
+            name: 'Skiing',
+            img: 'img/fernie.jpg'
+        }
     ];
 
     // reset all views to base state
@@ -65,7 +77,13 @@ angular.module('mattliving').controller('HomeCtrl', function($scope) {
         event.stopPropagation();
     });
 
-    $scope.$on("list:li:inactive", function(event, item) {
+    $scope.$on("list:li:inactive", function(event, item, position) {
+        if (position === "left") {
+            $scope.switchView("right", "panel");
+        }
+        else if (position === "right") {
+            $scope.switchView("left", "panel");
+        }
         event.stopPropagation();
     });
 });

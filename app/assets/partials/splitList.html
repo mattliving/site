@@ -1,5 +1,5 @@
 <ul class='list-group'>
-  <li class='list-group-item' ng-click="toggleActive($event, item)" ng-repeat='item in items'>
+  <li class='list-group-item' ng-style="{'background': 'url('+item.img+') no-repeat', 'background-size': 'cover'}" ng-click="toggleActive($event, item)" ng-repeat='item in items'>
     <div class='vertically-centered'>
       <h4>{{property ? item[property] : item}}</h4>
     </div>

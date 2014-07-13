@@ -140,13 +140,15 @@ container {
         left: 25%;
       }
     }
-    &:hover:not(.twothirds) {
-      background: #CC5500;
-      .transition-ease(180ms);
-      h1 {
-        font-size: 38px;
-        color: @clouds;
+    &:hover {
+      &:not(.two-thirds):not(.middle) {
+        background: #CC5500;
         .transition-ease(180ms);
+        h1 {
+          font-size: 38px;
+          color: @clouds;
+          .transition-ease(180ms);
+        }
       }
     }
     &.middle {
