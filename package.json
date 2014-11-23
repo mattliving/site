@@ -15,15 +15,15 @@
     "start": "node_modules/.bin/brunch watch --server",
     "test": "testacular start test/testacular.conf.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.*"
+  },
   "devDependencies": {
     "brunch": "latest",
     "javascript-brunch": "latest",
-
     "css-brunch": "latest",
     "clean-css-brunch": "latest",
     "less-brunch": "latest",
-
     "ngmin-uglify-js-brunch": "~1.7.2",
     "auto-reload-brunch": "latest",
     "protractor": "latest"
