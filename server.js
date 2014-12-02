@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(__dirname + "/_public"));
 
 app.get("/places", function(req, res) {
-  var places = fs.readFileSync('./myplaces.json');
+  var places = fs.readFileSync("./myplaces.json", "utf8");
   if (places) res.json(places);
 });
 
