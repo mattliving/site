@@ -4,4 +4,8 @@ var app = express();
 
 app.use(express.static(__dirname + "/_public"));
 
-app.listen(process.env.PORT || 3000);
+app.get("/places", function(req, res) {
+  res.json("myplaces.json");
+});
+
+app.listen(process.env.PORT || 8000);

@@ -1,0 +1,399 @@
+[{
+  "place": "vancouver, british columbia",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "fernie, alberta",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "alaska, usa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "san francisco, california",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "san jose, california",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "new york city",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "chicago, usa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "miami, florida",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "vero beach, florida",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "texas, usa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "maine, usa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "new jersey, usa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "charlotte, north carolina",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "london, united kingdom",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "edinburgh, united kingdom",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "bristol, united kingdom",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "dublin, united kingdom",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "barcelona, spain",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "mallorca, spain",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "prague, czech republic",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "amsterdam, the netherlands",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "stockholm, sweden",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "malmo, sweden",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "falsterbo, sweden",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "turekov, sweden",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "switzerland",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "copenhagen, denmark",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "berlin, germany",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "florence, italy",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "venice, italy",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "rome, italy",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "sardinia, italy",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "lisbon, portugal",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "paris, france",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "nice, france",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "vienna, austria",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "tallinn, estonia",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "tokyo, japan",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "hong kong, china",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "new delhi, india",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "leh, india",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "bali, indonesia",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "kuala lumper, malaysia",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "bangkok, thailand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "koh samui, thailand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "phuket, thailand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "krabi, thailand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "ho chi minh city, vietnam",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "singapore, singapore",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "adeleide, australia",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "auckland, new zealand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "queenstown, new zealand",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "cape town, south africa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "johannesburg, south africa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "durban, south africa",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "mauritius",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+},
+{
+  "place": "botswana",
+  "coordinates": {
+    "lat": "",
+    "lng": ""
+  }
+}]
