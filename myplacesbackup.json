@@ -1,19 +1,5 @@
 [
     {
-        "place": "vancouver, british columbia",
-        "coordinates": {
-            "lat": 49.2827291,
-            "lng": -123.1207375
-        }
-    },
-    {
-        "place": "fernie, alberta",
-        "coordinates": {
-            "lat": 49.50404520000001,
-            "lng": -115.063065
-        }
-    },
-    {
         "place": "alaska, usa",
         "coordinates": {
             "lat": 64.2008413,
@@ -28,17 +14,24 @@
         }
     },
     {
+        "place": "vancouver, british columbia",
+        "coordinates": {
+            "lat": 49.2827291,
+            "lng": -123.1207375
+        }
+    },
+    {
+        "place": "fernie, alberta",
+        "coordinates": {
+            "lat": 49.50404520000001,
+            "lng": -115.063065
+        }
+    },
+    {
         "place": "san jose, california",
         "coordinates": {
             "lat": 37.3393857,
             "lng": -121.8949555
-        }
-    },
-    {
-        "place": "new york city",
-        "coordinates": {
-            "lat": 40.7127837,
-            "lng": -74.0059413
         }
     },
     {
@@ -56,10 +49,10 @@
         }
     },
     {
-        "place": "vero beach, florida",
+        "place": "new york city",
         "coordinates": {
-            "lat": 27.6386434,
-            "lng": -80.39727359999999
+            "lat": 40.7127837,
+            "lng": -74.0059413
         }
     },
     {
@@ -70,17 +63,17 @@
         }
     },
     {
+        "place": "vero beach, florida",
+        "coordinates": {
+            "lat": 27.6386434,
+            "lng": -80.39727359999999
+        }
+    },
+    {
         "place": "maine, usa",
         "coordinates": {
             "lat": 45.253783,
             "lng": -69.4454689
-        }
-    },
-    {
-        "place": "new jersey, usa",
-        "coordinates": {
-            "lat": 40.0583238,
-            "lng": -74.4056612
         }
     },
     {
@@ -98,17 +91,17 @@
         }
     },
     {
+        "place": "new jersey, usa",
+        "coordinates": {
+            "lat": 40.0583238,
+            "lng": -74.4056612
+        }
+    },
+    {
         "place": "edinburgh, united kingdom",
         "coordinates": {
             "lat": 55.953252,
             "lng": -3.188267
-        }
-    },
-    {
-        "place": "bristol, united kingdom",
-        "coordinates": {
-            "lat": 51.454513,
-            "lng": -2.58791
         }
     },
     {
@@ -119,6 +112,13 @@
         }
     },
     {
+        "place": "mallorca, spain",
+        "coordinates": {
+            "lat": 39.6952629,
+            "lng": 3.0175712
+        }
+    },
+    {
         "place": "barcelona, spain",
         "coordinates": {
             "lat": 41.3850639,
@@ -126,10 +126,10 @@
         }
     },
     {
-        "place": "mallorca, spain",
+        "place": "bristol, united kingdom",
         "coordinates": {
-            "lat": 39.6952629,
-            "lng": 3.0175712
+            "lat": 51.454513,
+            "lng": -2.58791
         }
     },
     {
@@ -154,13 +154,6 @@
         }
     },
     {
-        "place": "malmo, sweden",
-        "coordinates": {
-            "lat": 55.604981,
-            "lng": 13.003822
-        }
-    },
-    {
         "place": "falsterbo, sweden",
         "coordinates": {
             "lat": 55.397121,
@@ -182,17 +175,17 @@
         }
     },
     {
+        "place": "malmo, sweden",
+        "coordinates": {
+            "lat": 55.604981,
+            "lng": 13.003822
+        }
+    },
+    {
         "place": "copenhagen, denmark",
         "coordinates": {
             "lat": 55.6760968,
             "lng": 12.5683371
-        }
-    },
-    {
-        "place": "berlin, germany",
-        "coordinates": {
-            "lat": 52.52000659999999,
-            "lng": 13.404954
         }
     },
     {
@@ -210,10 +203,10 @@
         }
     },
     {
-        "place": "rome, italy",
+        "place": "berlin, germany",
         "coordinates": {
-            "lat": 41.9027835,
-            "lng": 12.4963655
+            "lat": 52.52000659999999,
+            "lng": 13.404954
         }
     },
     {
@@ -221,6 +214,13 @@
         "coordinates": {
             "lat": 40.1208752,
             "lng": 9.012892599999999
+        }
+    },
+    {
+        "place": "rome, italy",
+        "coordinates": {
+            "lat": 41.9027835,
+            "lng": 12.4963655
         }
     },
     {
@@ -252,6 +252,13 @@
         }
     },
     {
+        "place": "hong kong, china",
+        "coordinates": {
+            "lat": 22.396428,
+            "lng": 114.109497
+        }
+    },
+    {
         "place": "tallinn, estonia",
         "coordinates": {
             "lat": 59.43696079999999,
@@ -263,20 +270,6 @@
         "coordinates": {
             "lat": 35.6894875,
             "lng": 139.6917064
-        }
-    },
-    {
-        "place": "hong kong, china",
-        "coordinates": {
-            "lat": 22.396428,
-            "lng": 114.109497
-        }
-    },
-    {
-        "place": "new delhi, india",
-        "coordinates": {
-            "lat": 28.6322444,
-            "lng": 77.2207238
         }
     },
     {
@@ -294,10 +287,10 @@
         }
     },
     {
-        "place": "kuala lumper, malaysia",
+        "place": "new delhi, india",
         "coordinates": {
-            "lat": 3.139003,
-            "lng": 101.686855
+            "lat": 28.6322444,
+            "lng": 77.2207238
         }
     },
     {
@@ -315,10 +308,10 @@
         }
     },
     {
-        "place": "phuket, thailand",
+        "place": "kuala lumper, malaysia",
         "coordinates": {
-            "lat": 7.9519331,
-            "lng": 98.33808839999999
+            "lat": 3.139003,
+            "lng": 101.686855
         }
     },
     {
@@ -329,10 +322,10 @@
         }
     },
     {
-        "place": "ho chi minh city, vietnam",
+        "place": "phuket, thailand",
         "coordinates": {
-            "lat": 10.8230989,
-            "lng": 106.6296638
+            "lat": 7.9519331,
+            "lng": 98.33808839999999
         }
     },
     {
@@ -343,10 +336,10 @@
         }
     },
     {
-        "place": "adeleide, australia",
+        "place": "ho chi minh city, vietnam",
         "coordinates": {
-            "lat": -34.92862119999999,
-            "lng": 138.5999594
+            "lat": 10.8230989,
+            "lng": 106.6296638
         }
     },
     {
@@ -357,10 +350,10 @@
         }
     },
     {
-        "place": "queenstown, new zealand",
+        "place": "adeleide, australia",
         "coordinates": {
-            "lat": -45.0311622,
-            "lng": 168.6626435
+            "lat": -34.92862119999999,
+            "lng": 138.5999594
         }
     },
     {
@@ -375,6 +368,13 @@
         "coordinates": {
             "lat": -26.2041028,
             "lng": 28.0473051
+        }
+    },
+    {
+        "place": "queenstown, new zealand",
+        "coordinates": {
+            "lat": -45.0311622,
+            "lng": 168.6626435
         }
     },
     {
