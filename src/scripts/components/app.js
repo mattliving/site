@@ -1,6 +1,7 @@
 'use strict';
 
-var React = require('react/addons');
+var React                = require('react/addons');
+var RouteHandler         = require('react-router').RouteHandler;
 var ReactTransitionGroup = React.addons.TransitionGroup;
 
 // CSS
@@ -9,13 +10,14 @@ require('../../styles/app.less');
 
 var imageURL = require('../../images/yeoman.png');
 
-var MattlivingApp = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
           <img src={imageURL} />
         </ReactTransitionGroup>
+        <RouteHandler/>
       </div>
     );
   }
@@ -27,6 +29,4 @@ class Person {
   }
 }
 
-console.log(new Person());
-
-module.exports = MattlivingApp;
+module.exports = App;

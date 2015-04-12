@@ -10,8 +10,9 @@
   "mainInput": "main",
   "mainOutput": "main",
   "dependencies": {
-    "react-router": "^0.11.6",
-    "react": "~0.12.2"
+    "packery": "^1.4.1",
+    "react": "~0.12.2",
+    "react-router": "^0.11.6"
   },
   "devDependencies": {
     "babel-core": "^5.0.12",
