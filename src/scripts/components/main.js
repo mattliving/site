@@ -1,16 +1,19 @@
 'use strict';
 
-var App     = require('./app.js');
-var Gallery = require('./gallery.js');
-var React   = require('react');
-var Router  = require('react-router');
-var Route   = Router.Route;
+import App from './app.js';
+import Gallery from './gallery.js';
+import Map from './map.js';
+import React from 'react';
+import Router from 'react-router';
 
-var content = document.getElementById('content');
+let Route = Router.Route;
 
-var Routes = (
+let content = document.getElementById('content');
+
+let Routes = (
   <Route path="/" handler={App}>
     <Route path="gallery" name="gallery" handler={Gallery} />
+    <Route path="map" name="map" handler={Map} />
   </Route>
 );
 

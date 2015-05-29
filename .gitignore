@@ -20,4 +20,3 @@ node_modules/
 src/images/JapaneseGallery/
 .tmp
 dist
-/src/scripts/main.js
