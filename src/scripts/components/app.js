@@ -12,9 +12,7 @@ let imageURL = require('../../images/yeoman.png');
 let App = React.createClass({
   render: function() {
     return (
-      <div className='main'>
-        <RouteHandler/>
-      </div>
+      <RouteHandler/>
     );
   }
 });
