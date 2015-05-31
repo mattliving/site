@@ -13,12 +13,12 @@ module.exports = {
   output: {
     publicPath: '/assets/',
     path: 'dist/assets/',
-    filename: 'main.js'
+    filename: 'index.js'
   },
 
   debug: false,
   devtool: false,
-  entry: './src/scripts/components/main.js',
+  entry: './src/index.js',
 
   stats: {
     colors: true,
@@ -35,8 +35,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js'],
     alias: {
-      'styles': '../../../src/styles',
-      'components': '../../../src/scripts/components/'
+      'components': '../../../src/components/'
     }
   },
 

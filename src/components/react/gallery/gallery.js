@@ -4,10 +4,7 @@ import _ from 'underscore';
 import $ from 'jquery';
 import React from 'react/addons';
 // import Packery from 'packery';
-import images from './gallery-item-names';
-
-require('../../styles/normalize.css');
-require('../../styles/app.less');
+import images from './components/galleryItemNames';
 
 let Gallery = React.createClass({
 

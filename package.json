@@ -7,14 +7,15 @@
   "src": "src",
   "test": "test",
   "dist": "dist",
-  "mainInput": "main",
-  "mainOutput": "main",
+  "mainInput": "index",
+  "mainOutput": "index",
   "scripts": {
     "start": "grunt serve",
     "test": "npm test"
   },
   "dependencies": {
     "jquery": "^2.0.0",
+    "marty": "^0.10.1",
     "packery": "^1.4.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",

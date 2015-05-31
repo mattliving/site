@@ -7,10 +7,12 @@
 'use strict';
 var webpack = require('webpack');
 
+// 'webpack/hot/only-dev-server',
+
 module.exports = {
 
   output: {
-    filename: 'main.js',
+    filename: 'index.js',
     publicPath: '/assets/'
   },
 
@@ -18,8 +20,7 @@ module.exports = {
   debug: true,
   devtool: false,
   entry: [
-    'webpack/hot/only-dev-server',
-    './src/scripts/components/main.js'
+    './src/index.js'
   ],
 
   stats: {
@@ -28,12 +29,9 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js'],
-    alias: {
-      'styles': '../../../src/styles',
-      'components': '../../../src/scripts/components/'
-    }
+    extensions: ['', '.js']
   },
+
   module: {
     loaders: [{
       test: /\.js$/,
@@ -52,8 +50,9 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ]
 
 };
+
+//new webpack.HotModuleReplacementPlugin(),

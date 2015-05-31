@@ -1,0 +1,60 @@
+@import "variables.less";
+
+@noto: 'Noto Serif';
+@libre: 'Libre Baskerville';
+@font-family-serif: @libre, serif;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: @font-family-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+#app {
+  height: 900px;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+#gallery-container {
+  height: 900px!important;
+  width: 1440px!important;
+
+  .gallery-item {
+    width: 33.3333%;
+  }
+}
+
+.vertically-centered {
+  position: relative;
+  transformY: -50%;
+  top: 50%;
+}
+
+.transition-ease (@time: 250ms) {
+  -webkit-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: @time cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.transition-ease-in (@time: 400ms) {
+  -webkit-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+  -moz-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+  -ms-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+  -o-transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+  transition: @time cubic-bezier(0.420, 0.000, 1.000, 1.000) all;
+}
