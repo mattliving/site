@@ -2,10 +2,19 @@
 
 import React from 'react/addons';
 import Marty from 'marty';
+import GoogleMap from 'google-map-react';
+import Place from './components/place';
 
 let Map = React.createClass({
 
   displayName: 'Map',
+
+  getDefaultProps () {
+    return {
+      center: [51.5286416, -0.1015987],
+      zoom: 9
+    };
+  },
 
   componentWillMount () {
     let link = document.createElement('link');
@@ -22,15 +31,19 @@ let Map = React.createClass({
       return <div>Loading</div>
     } else {
       return (
-        <google-map lat='37.790' long='-122.390' zoom='12'>
-          <google-map-marker latitude='37.779' longitude='-122.3892' draggable='true' title='Go Giants!'></google-map-marker>
-          <google-map-marker latitude='37.777' longitude='-122.38911'></google-map-marker>
+        <google-map data-use-data-attributes="true" data-latitude={this.props.center[0]} data-longitude={this.props.center[1]} data-zoom={this.props.zoom} disable-default-ui>
+          <google-map-marker data-latitude='51.5286416' data-longitude='-0.1015987'></google-map-marker>
         </google-map>
       );
     }
   }
-
 });
+
+// <GoogleMap
+//   center={this.props.center}
+//   zoom={this.props.zoom}>
+//   <Place lat={59.955413} lng={30.337844} text={'A'} />
+// </GoogleMap>
 
 export default Marty.createContainer(Map, {
   listenTo: ['mapStore', 'applicationStore'],
@@ -39,8 +52,7 @@ export default Marty.createContainer(Map, {
   },
   pending () {
     return this.done({
-      loading: true,
-      albums: []
+      loading: true
     });
   }
 });

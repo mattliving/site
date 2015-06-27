@@ -1,0 +1,58 @@
+.Header {
+  background: #333;
+  height: 60px;
+  width: 100%;
+}
+
+.Header-title {
+  color: #efefef;
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  margin-left: 20px;
+}
+
+.Header-subtitle {
+  display: inline;
+  font-size: 12px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &:hover {
+    .Header-subtitle-maintext {
+      display: none;
+    }
+
+    .Header-subtitle-subtext {
+      display: inline;
+      text-transform: lowercase;
+    }
+  }
+}
+
+.Header-subtitle-subtext {
+  display: none;
+}
+
+.Header-links {
+  float: right;
+  line-height: 60px;
+  margin-right: 20px;
+}
+
+.Header-link {
+  color: #efefef;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  margin-left: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover {
+    color: #ededed;
+  }
+}

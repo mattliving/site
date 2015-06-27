@@ -2,7 +2,11 @@
 
 import Marty from 'Marty';
 import React from 'react/addons';
+import Header from '../header/header';
+import Timeline from '../timeline/timeline';
+import PhotoCollection from '../photoCollection/photoCollection';
 import {RouteHandler} from 'react-router';
+import events from '../../../data/events.js';
 
 require('./normalize.css');
 require('./app.less');
@@ -10,32 +14,30 @@ require('./app.less');
 let App = React.createClass({
 
   componentWillMount () {
-    window.fbAsyncInit = () => {
-      FB.init({
-        appId: '1658745387693458',
-        version : 'v2.3',
-        xfbml : true
-      });
-      this.app.applicationActions.setDependencyReady('fb-sdk', true);
-    };
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = '//connect.facebook.net/en_US/sdk.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    // window.fbAsyncInit = () => {
+    //   let appState = this.app.applicationStore.getState();
+    //   FB.init({
+    //     appId: appState.fbAppId,
+    //     version: appState.fbGraphApiVersion,
+    //     status: true,
+    //     xfbml: false
+    //   });
+    //   this.app.applicationActions.setDependencyReady('fb-sdk', true);
+    // };
+    // (function(d, s, id){
+    //   var js, fjs = d.getElementsByTagName(s)[0];
+    //   if (d.getElementById(id)) {return;}
+    //   js = d.createElement(s); js.id = id;
+    //   js.src = '//connect.facebook.net/en_US/sdk.js';
+    //   fjs.parentNode.insertBefore(js, fjs);
+    // }(document, 'script', 'facebook-jssdk'));
   },
 
   render () {
     return (
       <div className='container'>
-        <div
-          className='fb-like'
-          data-share='true'
-          data-width='450'
-          data-show-faces='true'>
-        </div>
+        <Header title='Mattliving' subtitle='software engineer'></Header>
+        <Timeline events={events}></Timeline>
         <RouteHandler/>
       </div>
     );

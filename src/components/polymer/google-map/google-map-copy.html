@@ -355,21 +355,21 @@ The `google-map` element renders a Google Map.
 
     _getMapOptions: function() {
       var mapOptions = {
-        zoom: this.zoom,
-        tilt: this.noAutoTilt ? 0 : 45,
-        mapTypeId: this.mapType,
-        disableDefaultUI: this.disableDefaultUi,
-        disableDoubleClickZoom: !this.zoomable,
-        scrollwheel: this.zoomable,
-        styles: this.styles,
-        maxZoom: this.maxZoom,
-        minZoom: this.minZoom
+        zoom: Number(this.dataset.zoom) || this.zoom,
+        tilt: (this.dataset.noAutoTilt || this.noAutoTilt) ? 0 : 45,
+        mapTypeId: this.dataset.mapType || this.mapType,
+        disableDefaultUI: this.dataset.disableDefaultUi || this.disableDefaultUi,
+        disableDoubleClickZoom: !this.dataset.zoomable || !this.zoomable,
+        scrollwheel: this.dataset.zoomable || this.zoomable,
+        styles: this.dataset.styles || this.styles,
+        maxZoom: Number(this.dataset.maxZoom || this.maxZoom),
+        minZoom: Number(this.dataset.minZoom || this.minZoom)
       };
 
       // Only override the default if set.
       // We use getAttribute here because the default value of this.draggable = false even when not set.
-      if (this.getAttribute('draggable') != null) {
-        mapOptions.draggable = this.draggable;
+      if (this.getAttribute('draggable') != null || this.dataset.draggable != null) {
+        mapOptions.draggable = this.dataset.draggable || this.draggable;
       }
       for (var p in this.additionalMapOptions)
         mapOptions[p] = this.additionalMapOptions[p];
@@ -430,13 +430,13 @@ The `google-map` element renders a Google Map.
     _updateCenter: function() {
       if (!this.map) {
         return;
-      } else if (typeof this.latitude !== 'number' || isNaN(this.latitude)) {
+      } else if (typeof this.latitude !== 'number' || isNaN(this.latitude) || typeof parseInt(this.dataset.latitude, 10) !== 'number' || isNaN(this.dataset.latitude)) {
         throw new TypeError('latitude must be a number');
-      } else if (typeof this.longitude !== 'number' || isNaN(this.longitude)) {
+      } else if (typeof this.longitude !== 'number' || isNaN(this.longitude) || typeof parseInt(this.dataset.longitude, 10) !== 'number' || isNaN(this.dataset.longitude)) {
         throw new TypeError('longitude must be a number');
       }
 
-      var newCenter = new google.maps.LatLng(this.latitude, this.longitude);
+      var newCenter = new google.maps.LatLng(Number(this.dataset.latitude) || this.latitude, Number(this.dataset.longitude) || this.longitude);
       var oldCenter = this.map.getCenter();
 
       if (!oldCenter) {
@@ -503,13 +503,13 @@ The `google-map` element renders a Google Map.
 
     _maxZoomChanged: function() {
       if (this.map) {
-        this.map.setOptions({maxZoom: this.maxZoom});
+        this.map.setOptions({maxZoom: Number(this.maxZoom || this.dataset.maxZoom)});
       }
     },
 
     _minZoomChanged: function() {
       if (this.map) {
-        this.map.setOptions({minZoom: this.minZoom});
+        this.map.setOptions({minZoom: Number(this.minZoom || this.dataset.minZoom)});
       }
     },
 
@@ -543,7 +543,7 @@ The `google-map` element renders a Google Map.
       // Cannot use *Changed watchers for native properties.
       switch (attrName) {
         case 'draggable':
-          this.map.setOptions({draggable: this.draggable});
+          this.map.setOptions({draggable: this.draggable || this.dataset.draggable});
           break;
       }
     },
@@ -571,9 +571,9 @@ The `google-map` element renders a Google Map.
       google.maps.event.addListener(this.map, 'center_changed', function() {
         var center = this.map.getCenter();
         this.latitude = center.lat();
-        center.lat();
+        this.dataset.latitude = center.lat();
         this.longitude = center.lng();
-        center.lng();
+        this.dataset.longitude = center.lng();
       }.bind(this));
 
       google.maps.event.addListener(this.map, 'zoom_changed', function() {

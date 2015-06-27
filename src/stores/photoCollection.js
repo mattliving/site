@@ -6,16 +6,23 @@ class PhotoCollectionStore extends Marty.Store {
     super(options);
     this.id = 'PhotoCollectionStore';
     this.state = {
-      users: {}
+      albums: []
     };
     this.handlers = {
-      setAlbumsForUser: Constants.RECEIVE_ALBUMS_FOR_USER
+
     };
   }
 
-  setAlbumsForUser (userId, albums) {
-    this.state.users[userId].albums = albums;
-    this.hasChanged();
+  getAlbums () {
+    return this.fetch({
+      id: 'albums',
+      locally: () => this.filter(this.state.albums),
+      remotely: () => photoCollectionQueries.getAlbums()
+    });
+  }
+
+  filter (albums) {
+    return albums;
   }
 }
 

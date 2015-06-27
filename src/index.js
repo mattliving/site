@@ -16,12 +16,16 @@ class Application extends Marty.Application {
   constructor(options) {
     super(options);
     this.register({
-      applicationStore: require('./stores/application'),
-      mapStore: require('./stores/map'),
-      photoCollectionStore: require('./stores/photoCollection'),
       applicationActions: require('./actions/application'),
+      applicationStore: require('./stores/application'),
+
       mapActions: require('./actions/map'),
-      photoCollectionActions: require('./actions/photoCollection')
+      mapStore: require('./stores/map'),
+
+      photoCollectionActions: require('./actions/photoCollection'),
+      photoCollectionApi: require('./sources/photoCollection'),
+      photoCollectionQueries: require('./queries/photoCollection'),
+      photoCollectionStore: require('./stores/photoCollection')
     });
   }
 }

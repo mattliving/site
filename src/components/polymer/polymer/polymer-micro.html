@@ -405,11 +405,25 @@ _marshalHostAttributes: function() {
 this._applyAttributes(this, this._aggregatedAttributes);
 },
 _applyAttributes: function(node, attr$) {
-for (var n in attr$) {
-if (!this.hasAttribute(n) && n !== "class") {
-this.serializeValueToAttribute(attr$[n], n, this);
-}
-}
+    var dataset = (node || this)['dataset'];
+    if (dataset.useDataAttributes) {
+      try {
+        dataset = JSON.parse(JSON.stringify(dataset));
+        for (dataAttr in dataset) {
+            if (dataset.hasOwnProperty(dataAttr) && dataAttr !== 'reactid' && dataAttr !== 'useDataAttributes') {
+                this.serializeValueToAttribute(dataset[dataAttr], dataAttr, this, true);
+            }
+        }
+        } catch (err) {
+            throw err;
+        }
+    } else {
+        for (var n in attr$) {
+        if (!this.hasAttribute(n) && n !== "class") {
+        this.serializeValueToAttribute(attr$[n], n, this);
+        }
+        }
+    }
 },
 _marshalAttributes: function() {
 this._takeAttributesToModel(this);
@@ -435,8 +449,11 @@ this._serializing = true;
 this.serializeValueToAttribute(this[name], Polymer.CaseMap.camelToDashCase(name));
 this._serializing = false;
 },
-serializeValueToAttribute: function(value, attribute, node) {
+serializeValueToAttribute: function(value, attribute, node, usesDataAttributes) {
 var str = this.serialize(value);
+if (usesDataAttributes && str !== undefined) {
+    this.dataset[attribute] = str;
+}
 (node || this)[str === undefined ? "removeAttribute" : "setAttribute"](attribute, str);
 },
 deserialize: function(value, type) {
